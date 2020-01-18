@@ -1,0 +1,124 @@
+.flex
+    display flex
+
+    // вертикальное позиционирование
+
+    &-top
+        align-items flex-start
+
+    &-middle
+        align-items center
+
+    &-bottom
+        align-items flex-end
+
+    &-stretch
+        align-items stretch
+
+    &-baseline
+        align-items baseline
+
+    // горизонтальное позиционирование
+
+    &-left
+        justify-content flex-start
+
+    &-center
+        justify-content center
+
+    &-right
+        justify-content flex-end
+
+    &-between
+        justify-content space-between
+
+    &-around
+        justify-content space-around
+
+    // возможность переноса
+
+    &-wrap {
+        flex-wrap wrap
+    }
+
+    &-nowrap
+        flex-wrap nowrap
+
+    &-wrap-reverse
+        flex-wrap wrap-reverse
+
+    // направление
+
+    &-row
+        flex-direction row
+
+    &-row-reverse
+        flex-direction row-reverse
+
+    &-column
+        flex-direction column
+
+    &-column-reverse
+        flex-direction column-reverse
+
+    // содержимое
+
+    &-item-top
+        align-self flex-start
+
+    &-item-bottom
+        align-self flex-end
+
+    &-item-center
+        align-self center
+
+    &-item-baseline
+        align-self baseline
+
+    &-item-stretch
+        align-self stretch
+
+    //
+
+    &-content-top
+        align-content flex-start
+
+    &-content-bottom
+        align-content flex-end
+
+    &-content-center
+        align-content center
+
+    &-content-stretch
+        align-content stretch
+
+    &-content-between
+        align-content space-between
+
+    &-content-around
+        align-content space-around
+
+.absolute-100
+    position absolute
+    top  0
+    left 0
+    width  100%
+    height 100%
+
+.absolute-center
+    position absolute
+    top    0
+    right  0
+    bottom 0
+    left   0
+    margin auto
+
+.fixed-100
+    position fixed
+    top  0
+    left 0
+    width  100%
+    height 100%
+
+.no-scroll
+    overflow hidden

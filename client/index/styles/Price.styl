@@ -1,0 +1,40 @@
+@require "../../common/styles/functions.styl"
+@require "../../common/styles/constants.styl"
+
+.price
+    position relative
+    max-width rem(1000px)
+    margin 0 auto
+    padding 2rem .5rem
+
+    &--column
+        position relative
+        padding 0 .5rem
+        flex-basis 100%
+
+        & > img
+            width  100%
+            height auto
+
+        & > h2
+            margin-bottom 1rem
+            font-size 1.8rem
+            color #fff
+
+        & > div
+            margin-top 1rem
+
+@media (max-width $smartphonesMediaMaxWidth)
+    .price
+        flex-wrap wrap
+        padding 0
+
+        &--column
+            margin-top 1rem
+            padding 0
+            &:first-child
+                margin-top 0
+
+            & > h2
+            & > div
+                padding 0 1rem

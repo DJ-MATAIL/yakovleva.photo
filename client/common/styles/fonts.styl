@@ -1,0 +1,82 @@
+$fontsDir = '/fonts/'
+$fontDir = $fontsDir + 'sourcesanspro/'
+$fontFamily = 'Source Sans Pro'
+
+fontSrc($name)
+    $path = $fontDir + 'sourcesanspro' + $name
+
+    src url($path + '.woff2') format('woff2'),
+        url($path + '.woff')  format('woff'),
+        url($path + '.ttf')   format('truetype')
+
+@font-face
+    font-family $fontFamily
+    fontSrc('extralight')
+    font-weight 200
+    font-style normal
+
+@font-face
+    font-family $fontFamily
+    fontSrc('extralightitalic')
+    font-weight 200
+    font-style italic
+
+@font-face
+    font-family $fontFamily
+    fontSrc('light')
+    font-weight 300
+    font-style normal
+
+@font-face
+    font-family $fontFamily
+    fontSrc('lightitalic')
+    font-weight 300
+    font-style italic
+
+@font-face
+    font-family $fontFamily
+    fontSrc('')
+    font-weight 400
+    font-style normal
+
+@font-face
+    font-family $fontFamily
+    fontSrc('italic')
+    font-weight 400
+    font-style italic
+
+@font-face
+    font-family $fontFamily
+    fontSrc('semibold')
+    font-weight 600
+    font-style normal
+
+@font-face
+    font-family $fontFamily
+    fontSrc('semibolditalic')
+    font-weight 600
+    font-style italic
+
+@font-face
+    font-family $fontFamily
+    fontSrc('bold')
+    font-weight 700
+    font-style normal
+
+@font-face
+    font-family $fontFamily
+    fontSrc('bolditalic')
+    font-weight 700
+    font-style italic
+
+@font-face
+    font-family $fontFamily
+    fontSrc('black')
+    font-weight 900
+    font-style normal
+
+@font-face
+    font-family $fontFamily
+    fontSrc('blackitalic')
+    font-weight 900
+    font-style italic

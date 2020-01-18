@@ -1,0 +1,45 @@
+@require "../../common/styles/functions.styl"
+@require "../../common/styles/constants.styl"
+
+.about
+    position relative
+    max-width rem(1000px)
+    margin 0 auto
+    padding 2rem 1rem
+    
+    &--image
+        width 40%
+        flex none
+
+        & > img
+            width  100%
+            height auto
+
+    &--text
+        margin-left 2rem
+        text-align justify
+        line-height 140%
+        font-size 1rem
+        color #ccc
+
+        p
+            margin-top 1rem
+
+            &:first-child
+                margin-top 0
+
+@media (max-width $smartphonesMediaMaxWidth)
+    .about
+        flex-wrap wrap
+        max-width none
+        width 100%
+        padding 0
+        
+        &--image
+            width 100%
+
+        &--text
+            width 100%
+            margin-top  1rem
+            margin-left 0
+            padding 0 1rem

@@ -1,0 +1,37 @@
+.slides-list
+    width 100%
+
+    & > header
+        padding 1rem 0
+        margin-right 1rem
+
+        button
+            margin-left 1rem
+            padding .5rem 1rem
+            opacity .75
+            border 1px solid #fff
+            background-color transparent
+            transition opacity .3s
+            color #fff
+
+            &:hover
+                opacity 1
+
+    &--body
+        margin 0 -2px
+        padding-right  1rem
+        padding-bottom 1rem
+
+    &--buttons
+        margin 1rem 0
+
+        & > button
+            padding .5rem 1rem
+            opacity .75
+            border 1px solid #fff
+            color #fff
+            transition opacity .3s
+            &:hover
+                opacity 1
+            &.disable
+                pointer-events none

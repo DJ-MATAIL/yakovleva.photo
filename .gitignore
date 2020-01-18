@@ -1,0 +1,9 @@
+node_modules
+dist/*
+!dist/.gitkeep
+keys/*.js
+logs/*
+!logs/.gitkeep
+uploads/*.*
+uploads/temp/*
+!uploads/temp/.gitkeep

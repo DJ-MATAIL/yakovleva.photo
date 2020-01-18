@@ -1,0 +1,62 @@
+<% /*
+    Входные данные:
+
+    String title,
+    String description,
+    String keywords
+    Array  ldJson
+*/ %>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title><%- title %></title>
+
+<meta name="keywords" content="<%- keywords %>" />
+<meta name="description" content="<%- description %>" />
+<meta name="language" content="RU" />
+<meta name="robots" content="all" />
+
+<meta name="google" content="notranslate" />
+
+<% /* Open Graph */ %>
+<meta property="og:title" content="<%- title %>" />
+<meta property="og:description" content="<%- description %>" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://yakovleva.photo" />
+<% // <meta property="og:image" content="/og-image.jpg" /> %>
+<% // <meta property="og:image:type" content="image/jpeg"> %>
+<% // <meta property="og:image:width" content="795"> %>
+<% // <meta property="og:image:height" content="200"> %>
+<meta property="og:locale" content="ru_RU" />
+
+<meta name="application-name" content="<%- title %>" />
+<meta name="apple-mobile-web-app-title" content="<%- title %>" />
+<meta name="msapplication-tooltip" content="<%- description %>" />
+
+<% /* styles */ %>
+<link rel="stylesheet" href="/dist/preload.css" />
+<link rel="stylesheet" href="/dist/app.css" />
+
+<% /* json-ld */ %>
+<script type="application/ld+json">
+<%- JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Наталия Яковлева',
+    url: 'https://yakovleva.photo',
+    jobTitle: 'Photographer',
+    sameAs: [
+        'https://www.instagram.com/nataliyakovlevafoto/',
+        'https://vk.com/id32047810',
+        'https://ok.ru/profile/128552930313'
+    ]
+}) %>
+</script>
+<% if (ldJson) { %>
+    <script type="application/ld+json"><%- JSON.stringify(ldJson) %></script>
+<% } %>
+
+<% /* favicons */ %>
+<link rel="icon" sizes="192x192" href="/favicon/192.png" />
+<link rel="apple-touch-icon" href="/favicon/192.png" />

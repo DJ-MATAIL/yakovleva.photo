@@ -1,0 +1,32 @@
+.images-list-item
+    position relative
+
+    & > img
+        width  100%
+        height 100%
+
+    & > div
+        cursor pointer
+        opacity 0
+        background-color rgba(0,0,0, .3)
+        transition opacity .3s
+
+        &:hover
+            opacity 1
+
+        & > button:nth-child(2)
+            position absolute
+            top   .25rem
+            right .25rem
+            width  2rem
+            height 2rem
+            opacity .75
+            border-radius .5rem
+            background-color #333
+            transition opacity .3s
+
+            & > img
+                width  60%
+                height 60%
+            &:hover
+                opacity 1

@@ -9,7 +9,7 @@ module.exports = class Time {
 
     constructor(initialTime) {
         if (initialTime) {
-            this.date = datetime.fromSQL(initialTime)
+            return this.date = datetime.fromSQL(initialTime)
         }
 
         this.date = datetime.local()

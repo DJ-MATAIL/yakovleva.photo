@@ -1,12 +1,23 @@
 import React, { useEffect } from 'react'
 import pages from '../../../common/constants/pages'
 
+import BasePage from '../components/BasePage'
+
 export default function DefaultPage() {
-    useEffect(() => {
+	useEffect(() => {
         document.title = pages.DEFAULT_PAGE
     }, [])
 
     return (
-        <h1>Default Page</h1>
+        <BasePage>
+			<h1
+				style={{
+					padding:    '1rem',
+					fontSize:   '2rem',
+					fontWeight: 'bold',
+					color:      '#fff'
+				}}
+			>Такой страницы не существует!</h1>
+		</BasePage>
     )
 }

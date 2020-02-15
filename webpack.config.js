@@ -4,6 +4,7 @@ const TerserPlugin            = require('terser-webpack-plugin')
 const MiniCssExtractPlugin    = require('mini-css-extract-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const { CleanWebpackPlugin }  = require('clean-webpack-plugin')
+const { WebpackBundleSizeAnalyzerPlugin } = require('webpack-bundle-size-analyzer')
 
 module.exports = {
     entry: {
@@ -47,6 +48,7 @@ module.exports = {
         ]
     },
     plugins: [
+        new WebpackBundleSizeAnalyzerPlugin('./report.txt'),
         new CleanWebpackPlugin({
             cleanOnceBeforeBuildPatterns: ['**/*', '!.gitkeep']
         }),
@@ -58,7 +60,14 @@ module.exports = {
     ],
     optimization: {
         minimizer: [
-            new TerserPlugin(),
+            new TerserPlugin({
+                terserOptions: {
+                    output: {
+                        comments: false
+                    }
+                },
+                extractComments: false
+            }),
             new OptimizeCssAssetsPlugin()
         ]
     },

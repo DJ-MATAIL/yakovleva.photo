@@ -3,3 +3,4 @@ User-Agent *
 Disallow /api/*
 Disallow /admin*
 Disallow /signin
+Disallow /uploads/*

@@ -1,7 +1,10 @@
+<%- include('matomo') %>
+
 <div id="root" class="flex flex-column"></div>
 
 <script>
     window.__REDUX_STATE__ = <%- redux %>
 </script>
 <script src="/dist/app.js"></script>
-<%- include('matomo') %>
+
+<%- include('matomo-noscript') %>

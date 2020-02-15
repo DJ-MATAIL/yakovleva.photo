@@ -100,6 +100,7 @@ exports.data = async (ctx, next) => {
 exports.meta = async (ctx, next) => {
     const { data } = ctx.state
     let title = PORTFOLIO_PAGE
+    let url   = `https://${ config.domain }/portfolio`
 
     const ldJson = {
         '@context': 'http://schema.org',
@@ -126,6 +127,7 @@ exports.meta = async (ctx, next) => {
 
     if (data.title) {
         title = data.title
+        url += `/${ data.sectionId }`
         ldJson.itemListElement.push({
             '@type': 'ListItem',
             position: 3,
@@ -138,7 +140,8 @@ exports.meta = async (ctx, next) => {
 
     ctx.state.meta = {
         title,
-        ldJson
+        ldJson,
+        url
     }
 
     await next()

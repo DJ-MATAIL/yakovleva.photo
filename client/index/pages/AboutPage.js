@@ -5,7 +5,7 @@ import BasePage from '../components/BasePage'
 import About    from '../components/About'
 
 export default function AboutPage() {
-    useEffect(() => {
+	useEffect(() => {
         document.title = pages.ABOUT_PAGE
     }, [])
 

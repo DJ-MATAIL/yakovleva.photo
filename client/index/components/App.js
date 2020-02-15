@@ -8,7 +8,7 @@ import PortfolioPage from '../pages/PortfolioPage'
 import DefaultPage   from '../pages/DefaultPage'
 
 import WithRouterParamsValidator from './WithRouterParamsValidator'
-import validationSchema          from '../../../common/utils/validation-schema'
+import { sectionId as sectionIdSchema } from '../utils/validation-schema'
 
 export default function App() {
     return (
@@ -40,7 +40,7 @@ export default function App() {
                     '/portfolio/:sectionId'
                 ]}
                 render={ () => <WithRouterParamsValidator
-                    schema={{ sectionId: validationSchema.sectionId }}
+                    schema={{ sectionId: sectionIdSchema }}
                     component={ PortfolioPage }
                 /> }
                 exact

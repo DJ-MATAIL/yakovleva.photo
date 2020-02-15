@@ -31,7 +31,8 @@ exports.meta = async (ctx, next) => {
 
     ctx.state.meta = {
         title: ABOUT_PAGE,
-        ldJson
+        ldJson,
+        url: `https://${ config.domain }/about`
     }
 
     await next()

@@ -1,14 +1,19 @@
-<script type="text/javascript">
-  var _paq = window._paq || [];
-  _paq.push(["setDoNotTrack", true]);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//stats.yakovleva.photo/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '1']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
+<script>
+    var _paq = window._paq || []
+
+    ;(function(){
+        var url = '//stats.yakovleva.photo/'
+        _paq.push([ 'setTrackerUrl', url + 'matomo.php' ])
+        _paq.push([ 'setSiteId', 1 ])
+        _paq.push([ 'trackPageView' ])
+        _paq.push([ 'enableHeartBeatTimer' ])
+        _paq.push([ 'enableLinkTracking' ])
+
+        var script = document.createElement('script')
+        script.src   = url + 'matomo.js'
+        script.async = true
+        script.defer = true
+
+        document.head.appendChild(script)
+    })()
 </script>
-<noscript><p><img src="//stats.yakovleva.photo/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>

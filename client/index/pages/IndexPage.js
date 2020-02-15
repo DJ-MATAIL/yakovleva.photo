@@ -5,7 +5,7 @@ import Header     from '../components/Header'
 import SlidesList from '../components/SlidesList'
 
 export default function IndexPage() {
-    useEffect(() => {
+	useEffect(() => {
         document.title = pages.INDEX_PAGE
     }, [])
 

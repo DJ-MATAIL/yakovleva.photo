@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Redirect, useParams } from 'react-router-dom'
-import Joi from '@hapi/joi'
 
 function WithRouterParamsValidator(props) {
     const params = useParams()
@@ -9,13 +8,8 @@ function WithRouterParamsValidator(props) {
         schema,
         component: Component
     } = props
-    const _schema = Joi
-        .object()
-        .keys(schema)
-        .required()
-    const validationResult = _schema.validate(params)
 
-    if (validationResult.error) {
+    if (params.sectionId && !schema.sectionId.test(params.sectionId)) {
         return <Redirect to="/" />
     }
 

@@ -5,7 +5,7 @@ import BasePage from '../components/BasePage'
 import Price    from '../components/Price'
 
 export default function PricePage() {
-    useEffect(() => {
+	useEffect(() => {
         document.title = pages.PRICE_PAGE
     }, [])
 
